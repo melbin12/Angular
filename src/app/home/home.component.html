@@ -1,0 +1,70 @@
+<h1>Hey Welcome to</h1>
+<!-- <button (click)="gotoCont()">Go to contact us component</button> -->
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+  <div >
+    <h2>Create Form in Angular </h2>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="col-sm-2 col-form-label">Name:</label>
+        <input id="name" type="text" pInputText formControlName="name" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+        <input id="email" type="email" pInputText formControlName="email" />
+      </div>
+      <div class="mb-3">
+        <label for="address" class="col-sm-2 col-form-label">Address:</label>
+        <input id="address" type="text" pInputText formControlName="address" />
+      </div>
+      <div class="mb-3">
+        <label  for="number" class="col-sm-2 col-form-label">Number:</label>
+        <input id="number" type="text" pInputText formControlName="number" />
+      </div>
+      <div class="mb-3">
+        <label for="language" class="col-sm-2 col-form-label">Language:</label>
+        <p-dropdown
+          id="language"
+          [options]="languages"
+          formControlName="language"
+          placeholder="Select a language"
+        ></p-dropdown>
+      </div>
+      <div class="mb-3">
+        <button type="submit" pButton label="Submit" [disabled]="!myForm.valid"></button>
+      </div>
+    </form>
+  </div>
+  
+  <div *ngIf="submitted" class="mb-3">
+    <h2>Inserted Values</h2><br>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Address</th>
+          <th scope="col">Number</th>
+          <th scope="col">Language</th>
+        </tr>
+      </thead>
+      <tbody class="pb-3">
+        <tr *ngFor="let data of insertedData">
+          <th scope="row">1</th>
+          <td>{{ data.name }}</td>
+          <td>{{ data.email }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.number }}</td>
+          <td>{{ data.language }}</td>
+        </tr> 
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <div class="col-md-3"></div>
+  </div>
+  </div>

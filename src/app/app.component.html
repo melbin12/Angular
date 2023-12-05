@@ -1,0 +1,52 @@
+
+
+<!-- Example with routerLink in a template -->
+<!-- <a routerLink="/Home">Go to Home</a> -->
+
+<nav >
+  <div class="main-div">
+  <div>
+   Angular
+  </div>
+  <div>
+    <ul class="ul-div">
+      <li [routerLink]="['./Home']">Home</li>
+      <li [routerLink]="['./contact-us']">Contact Us</li>
+      <li [routerLink]="['./About-us']">About US</li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+
+
+
+<div>
+  <table>
+    <thead>
+    <th>Name</th>
+    <th>Price</th>
+    </thead>
+    <tbody *ngFor="let item of fruits">
+      <tr *ngIf="item.price==400">
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- <ul *ngFor="let item of postArray">
+  <li>Facility ID: {{ item .facid}}</li>
+  <li>Name: {{ item.name }}</li>
+  <li>Member Cost: {{ item.membercost }}</li>
+  <li>Guest Cost: {{ item.guestcost }}</li>
+  <li>Initial Outlay: {{ item.initialoutlay }}</li>
+  <li>Monthly Maintenance: {{ item.monthlymaintenance }}</li>
+  <hr>
+</ul> -->
+
+
+<!-- app.component.html -->
+<router-outlet></router-outlet>
+

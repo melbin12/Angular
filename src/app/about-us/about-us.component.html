@@ -1,0 +1,15 @@
+<div>
+    <h3>Bookings</h3>
+    <Form>
+        <ul *ngFor="let item of postArray">
+            <li>Facility ID: {{ item .facid}}</li>
+            <li>Name: {{ item.name }}</li>
+            <li>Member Cost: {{ item.membercost }}</li>
+            <li>Guest Cost: {{ item.guestcost }}</li>
+            <li>Initial Outlay: {{ item.initialoutlay }}</li>
+            <li>Monthly Maintenance: {{ item.monthlymaintenance }}</li>
+            <hr>
+          </ul>
+          
+    </Form>
+</div>
