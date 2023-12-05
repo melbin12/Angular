@@ -8,7 +8,7 @@ import { ApicallService } from '../apicall.service';
 })
 export class AboutUsComponent  implements OnInit {
   
-  postArray: any[] = [];
+  postArray: any[] = [];//postArray is declared as a class property with the type any[], indicating that it's an array that can contain elements of any type.
   constructor(private getApi: ApicallService) {}
 
   ngOnInit() {

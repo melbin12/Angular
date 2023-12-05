@@ -1,1 +1,41 @@
-<p>contact-us works!</p>
+
+<div class="container">
+    <h3>Angular Forms</h3>
+    <form #form="ngForm" (ngSubmit)="form.valid && onSubmit()">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" name="firstname" required #firstName="ngModel" [(ngModel)]="data.firstname">
+        <label class="text-danger" *ngIf="form.submitted && firstName.errors?.['required']">First Name is Required</label><br>
+        <!-- {{firstName.value}} -->
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" name="lastname" required #lastname="ngModel" [(ngModel)]="data.lastname">
+        <label class="text-danger" *ngIf="form.submitted && lastname.errors?.['required']">Last Name is Required</label><br>
+       
+
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" required #email="ngModel" [(ngModel)]="data.email"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            <label class="text-danger" *ngIf="form.submitted && email.errors?.['required']">email is reqired</label><br>
+            <label class="text-danger" *ngIf="form.submitted && email.errors?.['pattern']">email Enter the correct pattern</label><br>
+
+            <label for="phone">Phone</label>
+            <input type="number" class="form-control" name="phone" required #phone="ngModel" [(ngModel)]="data.phone"  pattern="[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{4}">
+            <label class="text-danger" *ngIf="form.submitted && phone.errors?.['required']">phone is reqired</label><br>
+            <label class="text-danger" *ngIf="form.submitted && phone.errors?.['pattern']">phone Enter the correct pattern</label><br>
+            <div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+<br><br>
+    <form action="" [formGroup]="registration" >
+        <label for="email">Email</label>
+        <input type="text" class="form-control" formControlName="email"><br>
+        <div><button type="button" class="btn btn-success" (click)="addAlternativeEmail()">ADD</button></div><br>
+        <div formArrayName="alternativeEmails" *ngFor="let item of alternativeEmails.controls;let i=index">
+        <label for="">alternativeEmails{{i+1}}</label>
+        <input type="text" [formControlName]="i" class="form-control">
+        </div>
+        <div>
+            <button class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>

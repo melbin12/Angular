@@ -1,0 +1,30 @@
+.table-container {
+    max-height: 300px; /* Set the desired height for the scrollable area */
+    overflow-y: auto;
+  }
+  .underclass table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd; /* Border color */
+  }
+  
+  /* Style table headers */
+  .underclass th {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    text-align: left;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Style table cells */
+ .underclass td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Reduce the row height */
+  tr {
+    height: 10px; /* Adjust the height as needed */
+  }

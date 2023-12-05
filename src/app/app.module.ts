@@ -13,6 +13,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApicallService } from './apicall.service';
+import { TableModule } from 'primeng/table';
+import {CardModule} from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { ApicallService } from './apicall.service';
     ReactiveFormsModule,
     InputTextModule,
     DropdownModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    CardModule
   ],
   providers: [ApicallService],
   bootstrap: [AppComponent]

@@ -10,19 +10,19 @@
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label for="name" class="col-sm-2 col-form-label">Name:</label>
-        <input id="name" type="text" pInputText formControlName="name" />
+        <input id="name" type="text" pInputText formControlName="name" [ngClass]="{'is-is-invalid':submitted}"/>
       </div>
       <div class="mb-3">
         <label for="email" class="col-sm-2 col-form-label">Email:</label>
-        <input id="email" type="email" pInputText formControlName="email" />
+        <input id="email" type="email" pInputText formControlName="email" [ngClass]="{'is-is-invalid':submitted}" />
       </div>
       <div class="mb-3">
         <label for="address" class="col-sm-2 col-form-label">Address:</label>
-        <input id="address" type="text" pInputText formControlName="address" />
+        <input id="address" type="text" pInputText formControlName="address" [ngClass]="{'is-is-invalid':submitted}"/>
       </div>
       <div class="mb-3">
         <label  for="number" class="col-sm-2 col-form-label">Number:</label>
-        <input id="number" type="text" pInputText formControlName="number" />
+        <input id="number" type="text" pInputText formControlName="number" [ngClass]="{'is-is-invalid':submitted}"/>
       </div>
       <div class="mb-3">
         <label for="language" class="col-sm-2 col-form-label">Language:</label>
