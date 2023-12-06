@@ -19,7 +19,7 @@ addAlternativeEmail(){
 // }
 constructor(private fb:FormBuilder){}
 registration =this.fb.group({
-  email:['It mastr=er'],
+  email:[''],
   alternativeEmails:this.fb.array([])
 })
 data: any = { firstname: '' ,

@@ -26,7 +26,8 @@
         </div>
     </form>
 <br><br>
-    <form action="" [formGroup]="registration" >
+<!-- //(ngSubmit)="onSubmitedd(registration)" -->
+    <form action="" [formGroup]="registration" > 
         <label for="email">Email</label>
         <input type="text" class="form-control" formControlName="email"><br>
         <div><button type="button" class="btn btn-success" (click)="addAlternativeEmail()">ADD</button></div><br>

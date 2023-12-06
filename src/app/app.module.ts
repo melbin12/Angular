@@ -15,12 +15,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApicallService } from './apicall.service';
 import { TableModule } from 'primeng/table';
 import {CardModule} from 'primeng/card';
+import { PostmappingComponent } from './postmapping/postmapping.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    PostmappingComponent
   ],
   imports: [
     BrowserModule,
