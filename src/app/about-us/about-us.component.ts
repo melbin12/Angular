@@ -12,9 +12,9 @@ export class AboutUsComponent  implements OnInit {
   constructor(private getApi: ApicallService) {}
 
   ngOnInit() {
-    this.getApi.getPost().subscribe((res) => {
-      this.postArray = res;
-      console.log(res);
-    });
+    // this.getApi.getPost().subscribe((res : any) => {
+    //   this.postArray = res;
+    //   console.log(res);
+    // });
   }
 }

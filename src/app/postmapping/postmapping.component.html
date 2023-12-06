@@ -1,1 +1,113 @@
-<p>postmapping works!</p>
+<div class="container mt-5">
+    <h2>Facility Booking Form</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <!-- Facility Information -->
+        <div class="container mt-5">
+                <div class="form-group">
+                    <label for="facilityName">Facility Name</label>
+                    <input type="text" class="form-control" id="facilityName" placeholder="Enter facility name" [(ngModel)]="data.facid"  [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="memberCost">Member Cost</label>
+                    <input type="number" class="form-control" id="memberCost" placeholder="Enter member cost" [(ngModel)]="data.membercost"  [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="guestCost">Guest Cost</label>
+                    <input type="number" class="form-control" id="guestCost" placeholder="Enter guest cost" [(ngModel)]="data.guestcost"  [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="initialOutlay">Initial Outlay</label>
+                    <input type="number" class="form-control"  placeholder="Enter initial outlay" [(ngModel)]="data.initialoutlay"  [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label  for="monthlyMaintenance" class="col-sm-2 col-form-label">Monthly Maintenance:</label>
+                    <input id="number" type="number" class="form-control" placeholder="monthlyMaintenance"  [(ngModel)]="data.monthlymaintenance"  [ngModelOptions]="{standalone: true}"/>
+                </div>
+        
+
+        <!-- Member Information -->
+        <div class="form-group">
+            <label for="surname">Surname</label>
+            <input type="text" class="form-control" id="surname" placeholder="Enter surname" [(ngModel)]="data.surname" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="firstname" placeholder="Enter first name" [(ngModel)]="data.firstname" [ngModelOptions]="{standalone: true}" > 
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter address" [(ngModel)]="data.address" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+            <label for="zipcode">ZIP Code</label>
+            <input type="number" class="form-control" id="zipcode" placeholder="Enter ZIP code" [(ngModel)]="data.zipcode" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+            <label for="telephone">Telephone</label>
+            <input type="tel" class="form-control" id="telephone" placeholder="Enter telephone number" [(ngModel)]="data.telephone" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+            <label for="recommendedBy">Recommended By</label>
+            <input type="number" class="form-control" id="recommendedBy" placeholder="Enter recommended by" [(ngModel)]="data.facid" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+            <label for="joinDate">Join Date</label>
+            <input type="text" class="form-control" id="joinDate" placeholder="Enter join date" value="2022-08-10T09:30:00.000+00:00" readonly  [(ngModel)]="data.joindate" [ngModelOptions]="{standalone: true}">
+        </div>
+        <!-- Additional Facility Information -->
+        <div class="form-group">
+            <label for="startTime">Start Time</label>
+            <input type="text" class="form-control" id="startTime" placeholder="Enter start time" value="2022-08-10T13:15:00.000+00:00" readonly   [(ngModel)]="data.starttime" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+            <label for="slots">Number of Slots</label>
+            <input type="number" class="form-control" id="slots" placeholder="Enter number of slots" [(ngModel)]="data.slots"  [ngModelOptions]="{standalone: true}">
+        </div>
+        
+        <!-- <div class="form-group">
+            <label for="courtName">Court Name</label>
+            <input type="text" class="form-control" id="courtName" placeholder="Enter court name" [(ngModel)]="data.name">
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="memberCost">Member Cost</label>
+            <input type="number" class="form-control" id="memberCost    " placeholder="Enter member cost" [(ngModel)]="data.membercost">
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="guestCost">Guest Cost</label>
+            <input type="number" class="form-control" id="guestCost" placeholder="Enter guest cost" [(ngModel)]="data.guestcost" >
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="initialOutlay">Initial Outlay</label>
+            <input type="number" class="form-control" id="initialOutlay" placeholder="Enter initial outlay" [(ngModel)]="data.initialoutlay">
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="monthlyMaintenance">Monthly Maintenance</label>
+            <input type="number" class="form-control" id="monthlyMaintenance" placeholder="Enter monthly maintenance" [(ngModel)]="data.monthlymaintenance">
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="memSurname">Member Surname</label>
+            <input type="text" class="form-control" id="memSurname" placeholder="Enter member surname" [(ngModel)]="data.surname">
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="memFirstname">Member First Name</label>
+            <input type="text" class="form-control" id="memFirstname" placeholder="Enter member first name" [(ngModel)]="data.firstname">
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="memAddress">Member Address</label>
+            <input type="text" class="form-control" id="memAddress" placeholder="Enter member address" [(ngModel)]="data.address">
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="memZipcode">Member ZIP Code</label>
+            <input type="number" class="form-control" id="memZipcode" placeholder="Enter member ZIP code" [(ngModel)]="data.zipcode">
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="memTelephone">Member Telephone</label>
+            <input type="tel" class="form-control" id="memTelephone" placeholder="Enter member telephone" [(ngModel)]="data.telephone">
+        </div> -->
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+  
+        </div>
+    </form>

@@ -6,10 +6,13 @@
   export class ApicallService {
 
     constructor( private http:HttpClient) { }
-    getPost(){
-      return this.http.get<any>('http://localhost:8080/api/all');
-    }
+    // getPost(){
+    //   return this.http.get<any>('http://localhost:8080/api/all');
+    // }
 
+    getBooking(data :any){
+      return this.http.post<any>('http://localhost:8080/api/savebooking',data)
+    }
 
 
 
